@@ -23,6 +23,6 @@ jobs:
       - name: Slack notification with cypress-slack-reporter
         if: always()
         env: 
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
         run: |
           npx cypress-slack-reporter --report-dir mochawesome-report --ci-provider none
